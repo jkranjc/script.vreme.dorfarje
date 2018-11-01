@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.vreme.dorfarje" name="Vreme Dorfarje" version="1.0.1" provider-name="jkranjc">
+<addon id="script.vreme.dorfarje" name="Vreme Dorfarje" version="1.0.2" provider-name="jkranjc">
 	<requires>
 		<import addon="xbmc.python" version="2.14.0"/>
 	</requires>
