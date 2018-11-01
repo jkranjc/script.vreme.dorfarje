@@ -15,11 +15,11 @@ class MyClass(xbmcgui.Window):
 
   def localinfos(self):
     myinfos1 = xbmc.getLanguage()
-    self.strActionInfo = xbmcgui.ControlLabel(300, 150, 200, 200, '', 'font13', '0xFFFFFFFF')
+    self.strActionInfo = xbmcgui.ControlLabel(100, 150, 200, 200, '', 'font13', '0xFFFFFFFF')
     self.addControl(self.strActionInfo)
     self.strActionInfo.setLabel('Your language is : ' + myinfos1)
     myinfos2 = xbmc.getIPAddress()
-    self.strActionInfo = xbmcgui.ControlLabel(100, 200, 200, 200, '', 'font16', '0xFFFF2211')
+    self.strActionInfo = xbmcgui.ControlLabel(100, 200, 300, 200, '', 'font16', '0xFFFF2211')
     self.addControl(self.strActionInfo)
     self.strActionInfo.setLabel('Your IP adress je : ' + myinfos2)
 
