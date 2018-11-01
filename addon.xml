@@ -2,6 +2,7 @@
 <addon id="script.vreme.dorfarje" name="Vreme Dorfarje" version="1.0.2" provider-name="jkranjc">
 	<requires>
 		<import addon="xbmc.python" version="2.14.0"/>
+		<import addon="script.module.beautifulsoup" version="3.2.1"/> 
 	</requires>
 	<extension point="xbmc.python.script" library="addon.py">
 		<provides>executable</provides>
