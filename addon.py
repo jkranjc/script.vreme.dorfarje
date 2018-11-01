@@ -39,7 +39,7 @@ class MyClass(xbmcgui.Window):
     self.strActionInfo = xbmcgui.ControlLabel(100, 300, 200, 200, '', 'font13', '0xFFFFFFFF')
     self.addControl(self.strActionInfo)
     self.strActionInfo.setLabel('free mem : ' + str(myinfos4) + ' Mb')
-    myinfos5 = xbmc.getCpuTemp()
+    myinfos5 = xbmc.getFreeMem()
     self.strActionInfo = xbmcgui.ControlLabel(100, 350, 200, 200, '', 'font13', '0xFFFFFFFF')
     self.addControl(self.strActionInfo)
     self.strActionInfo.setLabel('cpu temp : ' + str(myinfos5) )
