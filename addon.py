@@ -7,14 +7,14 @@ ACTION_PREVIOUS_MENU = 10
 
 class MyClass(xbmcgui.Window):
   def __init__(self):
-    self.strActionInfo = xbmcgui.ControlLabel(100, 60, 200, 200, '', 'font14', '0xFFBBBBFF')
+    self.strActionInfo = xbmcgui.ControlLabel(50, 60, 200, 200, '', 'font14', '0xFFBBBBFF')
     self.addControl(self.strActionInfo)
     self.strActionInfo.setLabel('Push BACK to quit')
 
   def onAction(self, action):
     if action == ACTION_PREVIOUS_MENU:
       self.close()
-
+	  
   def localinfos(self):
     url = 'http://dorfarje.poglej.info/mobile.html'
     data = urllib2.urlopen(url).read()
@@ -23,13 +23,21 @@ class MyClass(xbmcgui.Window):
     vrsta = 100
     for link in links:
       links1 = link.findAll('td')
-      self.strActionInfo = xbmcgui.ControlLabel(100, vrsta, 500, 500, '', 'font24', '0xFFFFFF11')
+      self.strActionInfo = xbmcgui.ControlLabel(50, vrsta, 500, 500, '', 'font24', '0xFFFFFF11')
       self.addControl(self.strActionInfo)
       self.strActionInfo.setLabel(links1[0].text)
-      self.strActionInfo = xbmcgui.ControlLabel(500, vrsta, 500, 500, '', 'font24', '0xFFFF11FF')
+      self.strActionInfo = xbmcgui.ControlLabel(350, vrsta, 500, 500, '', 'font24', '0xFFFF11FF')
       self.addControl(self.strActionInfo)
       self.strActionInfo.setLabel(links1[1].text)
       vrsta = vrsta + 30
+    self.image = xbmcgui.ControlImage(550, 100, 300, 180, 'http://dorfarje.poglej.info/daytempdew.png')
+    self.addControl(self.image)
+    self.image = xbmcgui.ControlImage(870, 100, 300, 180, 'http://dorfarje.poglej.info/daybarometer.png')
+    self.addControl(self.image)
+    self.image = xbmcgui.ControlImage(550, 300, 300, 180, 'http://dorfarje.poglej.info/daywind.png')
+    self.addControl(self.image)
+    self.image = xbmcgui.ControlImage(870, 300, 300, 180, 'http://dorfarje.poglej.info/daywinddir.png')
+    self.addControl(self.image)
 
 mydisplay = MyClass()
 mydisplay.localinfos()
