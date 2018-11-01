@@ -21,8 +21,7 @@ class MyClass(xbmcgui.Window):
     myinfos2 = xbmc.getIPAddress()
     self.strActionInfo = xbmcgui.ControlLabel(100, 200, 200, 200, '', 'font16', '0xFFFF2211')
     self.addControl(self.strActionInfo)
-	self.strActionInfo.setLabel('Your IP adress is : ' + myinfos2)
-
+    self.strActionInfo.setLabel('Your IP adress is : ' + myinfos2)
 
 mydisplay = MyClass()
 mydisplay.localinfos()
