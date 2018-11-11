@@ -7,7 +7,10 @@ ACTION_PREVIOUS_MENU = 10
 
 class MyClass(xbmcgui.Window):
   def __init__(self):
-    self.strActionInfo = xbmcgui.ControlLabel(50, 60, 200, 200, '', 'font14', '0xFFBBBBFF')
+    self.strActionInfo = xbmcgui.ControlLabel(50, 50, 200, 200, '', 'font16', '0xFFBBBBFF')
+    self.addControl(self.strActionInfo)
+    self.strActionInfo.setLabel('VREME - DORFARJE')
+    self.strActionInfo = xbmcgui.ControlLabel(870, 600, 200, 200, '', 'font14', '0xFFBBBBFF')
     self.addControl(self.strActionInfo)
     self.strActionInfo.setLabel('Push BACK to quit')
 
@@ -29,7 +32,9 @@ class MyClass(xbmcgui.Window):
       self.strActionInfo = xbmcgui.ControlLabel(350, vrsta, 500, 500, '', 'font24', '0xFFFF11FF')
       self.addControl(self.strActionInfo)
       self.strActionInfo.setLabel(links1[1].text)
-      vrsta = vrsta + 30
+      vrsta = vrsta + 28
+    self.image = xbmcgui.ControlImage(50, 390, 480, 360, 'http://www.poglej.info/dorfarje.jpg')
+    self.addControl(self.image)
     self.image = xbmcgui.ControlImage(550, 100, 300, 180, 'http://dorfarje.poglej.info/daytempdew.png')
     self.addControl(self.image)
     self.image = xbmcgui.ControlImage(870, 100, 300, 180, 'http://dorfarje.poglej.info/daybarometer.png')
